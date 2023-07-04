@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import classes from "./ArtistLogin.module.css";
-import { Form, redirect, useNavigation, useActionData, Link } from "react-router-dom";
+import classes from "./AdminLogin.module.css";
+import { Form, redirect, useNavigation, useActionData } from "react-router-dom";
 import validators from "./validators";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
-function ArtistLogin() {
+function AdminLogin() {
   const navigation = useNavigation();
   const data = useActionData();
   const isSubmitting = navigation.state === "submitting";
@@ -120,22 +120,12 @@ function ArtistLogin() {
             {isSubmitting ? "Please wait..." : "Login"}
           </button>
         </Form>
-        <div className="alert alert-warning">
-          <span>New Artist?</span>
-          <Link
-            to="/artist/register"
-            className="alert-link"
-          >
-            {" "}
-            Register
-          </Link>
-        </div>
       </div>
     </div>
   );
 }
 
-export default ArtistLogin;
+export default AdminLogin;
 
 export async function action({ request }) {
   const data = await request.formData();
@@ -145,7 +135,7 @@ export async function action({ request }) {
     password: data.get("password"),
   };
 
-  const response = await fetch("http://localhost:5000/artist/login", {
+  const response = await fetch("http://localhost:5000/admin/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -164,5 +154,5 @@ export async function action({ request }) {
   const resData = await response.json();
   localStorage.setItem("token", JSON.stringify(resData));
 
-  return redirect("/");
+  return redirect("/admin/home");
 }

@@ -47,6 +47,7 @@
   
   .nav-link:hover {
     text-decoration: underline;
+    color: rgb(66, 16, 151);
   }
 
   .dropdown-content {
@@ -64,9 +65,30 @@
     text-decoration: none;
     display: block;
   }
+
+  .dropdown-content a:hover {
+    color: rgb(32, 45, 188);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+  }
   
   .dropdown:hover .dropdown-content {
     display: block;
+  }
+
+  .nav-item button {
+    background-color: var(--color-gray-500);
+    color: var(--color-gray-900);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    text-decoration: none;
+  }
+
+  .nav-item button:hover {
+    text-decoration: underline;
+    color: rgb(66, 16, 151);
   }
   
   

@@ -1,0 +1,67 @@
+.mainRegister {
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    white,
+    orange,
+    yellow,
+    rgb(157, 138, 157)
+  );
+  padding: 20px 0px;
+}
+.registerPage {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.registerPage h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registerPage form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerPage .formGroup {
+  margin-bottom: 10px;
+}
+
+.registerPage label {
+  font-weight: bold;
+}
+
+.registerPage input[type="text"],
+.registerPage input[type="password"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.registerPage button[type="submit"] {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerPage button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

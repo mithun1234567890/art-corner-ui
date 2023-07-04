@@ -1,0 +1,59 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px); /* Adjust the width and spacing as needed */
+    margin: 10px; /* Adjust the spacing between cards as needed */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(23, 4, 4, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+  }
+
+  .card :hover {
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px); /* Adjust the width and spacing as needed for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%; /* Display cards in a single column for smaller screens */
+    }
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  .card span {
+    width: 100%;
+    height: 200px;
+    display: flex; /* Added */
+    align-items: center; /* Added */
+    justify-content: center; /* Added */
+    flex-grow: 1;
+    font-size: 46px; /* Adjust font size as needed */
+    font-weight: bold; /* Add font weight */
+    color: blue; /* Add text color */
+  }
+  
+  .label {
+    padding: 10px;
+    background-color: rgb(255, 89, 0);
+    text-align: center;
+  }
+  
